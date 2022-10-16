@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>University Prediction Portal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="m-5">
+        <form action="/" method="post">
+            <div class="mb-3">
+                <label for="" class="form-label" autofocus>GRE Score</label>
+                <input type="number" class="form-control" name="gre" id="" aria-describedby="helpId" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">TOEFL Score</label>
+                <input type="number" class="form-control" name="toefl" id="" aria-describedby="helpId" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">University Rating (Scale: 0-5)</label>
+                <input type="number" class="form-control" name="rating" id="" aria-describedby="helpId" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">LOR grade</label>
+                <input type="number" class="form-control" name="toefl" id="" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">
+                    Don't know what grade your LOR has? Try <a href="/grading-lor">Grade My LOR</a> to see if your LOR looks good to the Uni
+                </small>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">SOP grade</label>
+                <input type="number" class="form-control" name="toefl" id="" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">
+                    Don't know what grade your LOR has? Try <a href="/grading-sop">Grade My SOP</a> to see if your LOR looks good to the Uni
+                </small>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Do you have research/work experience?</label>
+                <br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exp" id="yes" value="1">
+                    <label class="form-check-label" for="yes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="exp" id="no" value="0">
+                    <label class="form-check-label" for="no">No</label>
+                </div>
+            </div>
+            <button class="btn btn-success" type="submit">Predict my chances</button>
+        </form>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
