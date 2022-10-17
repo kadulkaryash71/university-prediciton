@@ -37,29 +37,33 @@
         <form action="/" method="post">
             <div class="mb-3">
                 <label for="" class="form-label" autofocus>GRE Score</label>
-                <input type="number" class="form-control" name="gre" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" min="0" max="340" class="form-control" name="gre" id="" aria-describedby="helpId" placeholder="">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">TOEFL Score</label>
-                <input type="number" class="form-control" name="toefl" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" min="0" max="120" class="form-control" name="toefl" id="" aria-describedby="helpId" placeholder="">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">University Rating (Scale: 0-5)</label>
-                <input type="number" class="form-control" name="rating" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" min="0" max="5" class="form-control" name="rating" id="" aria-describedby="helpId" placeholder="">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">LOR grade</label>
-                <input type="number" class="form-control" name="toefl" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" step="any" min="0" max="5" class="form-control" name="lor" id="" aria-describedby="helpId" placeholder="">
                 <small id="helpId" class="form-text text-muted">
                     Don't know what grade your LOR has? Try <a href="/grading-lor">Grade My LOR</a> to see if your LOR looks good to the Uni
                 </small>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">SOP grade</label>
-                <input type="number" class="form-control" name="toefl" id="" aria-describedby="helpId" placeholder="">
+                <input type="number" step="any" min="0" max="5" class="form-control" name="sop" id="" aria-describedby="helpId" placeholder="">
                 <small id="helpId" class="form-text text-muted">
                     Don't know what grade your LOR has? Try <a href="/grading-sop">Grade My SOP</a> to see if your LOR looks good to the Uni
                 </small>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">CGPA (scale: 10)</label>
+                <input type="number" step="any" min="0" max="10" class="form-control" name="cgpa" id="" aria-describedby="helpId" placeholder="">
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Do you have research/work experience?</label>
