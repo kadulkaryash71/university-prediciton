@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/progress.css') }}"> -->
+
 </head>
 
 <body>
@@ -26,8 +28,8 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="#">Recommend me</a>
                     </div>
                 </div>
             </div>
@@ -36,11 +38,14 @@
     <main>
         <div class="row">
             <div class="col-lg-12">
-                <div class="h-100 p-5 text-white bg-success">
+                <div class="p-5 text-white bg-success">
                     <h2>{{ prediction }}</h2>
                 </div>
+                <!-- <div class="progress h-25 m-5">
+                    <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{ result }}"
+                        aria-valuemin="0" aria-valuemax="100" data-result="{{result}}">{{ result }}%</div>
+                </div> -->
             </div>
-        </div>
     </main>
     <footer>
         <!-- place footer here -->
@@ -53,6 +58,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+    
+    <!-- <script>
+        let progress = document.querySelector("#progress-bar");
+        let result = progress.ariaValueNow;
+        progress.style.width = result + "%";
+        if(result > 80)
+            progress.classList.add("bg-success");
+
+    </script> -->
+
 </body>
 
 </html>
+
