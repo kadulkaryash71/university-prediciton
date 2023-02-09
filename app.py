@@ -29,7 +29,7 @@ def index():
         if result:
             prediction = "Congratulations! You might have a shot at your dream university. Go forward and contact your nearest counsellor now."
         else:
-            prediction = "Sorry but I think "
+            prediction = f"Sorry, the universities rated {to_predict_list[2]} or above may be a bit difficult for you. University recommendation tool is under development. Please do not lose hope."
         
 
         return render_template("result.html", prediction = prediction, result = round(result, 2))
