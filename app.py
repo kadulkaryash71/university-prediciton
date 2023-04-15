@@ -46,12 +46,15 @@ def chances():
         # Values:- GRE Score <=340, English test (TOEFL/IELTS), English Score (<= 120 / <= 9), University Name, Intake (fall, spring, winter, any)
         to_predict_list = request.get_json().values()
         to_predict_list = list(to_predict_list)
-        if to_predict_list[1] == 0:
+        print(to_predict_list)
+        if to_predict_list[1] == '0':
             to_predict_list[1] = 92
         else:
             to_predict_list[1] = to_predict_list[2]
             to_predict_list[2] = 7.0
 
+        print(to_predict_list)
+        
         to_predict_list = list(map(int, to_predict_list[:2])) + to_predict_list[2:]
         to_predict_list = to_predict_list[:2] + [float(to_predict_list[2])] + [int(to_predict_list[3])] + list(map(int, list(to_predict_list[4])))
         print(to_predict_list) # output: [322, 0, 8.0, 256, 1, 0, 0, 0, 0]
