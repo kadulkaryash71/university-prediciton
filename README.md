@@ -28,7 +28,12 @@ Alternatively, you can use:
 
 The server runs on http://localhost:5000/ by default. You will not need to open it. The purpose of this server is to handle HTTP requests, thus it does not have the full frontend. To access the full frontend clone the [UniRecommendationClient repository](https://github.com/kadulkaryash71/UniRecommendationClient "git clone in a separate folder")
 
-### Running the client
+### Running the Community backend
+Clone [this repository](https://github.com/kadulkaryash71/UniPredictionCommunity-v1) and follow the instructions of its README.md
+
+This repository runs on http://localhost:5001/ and has no frontend of its own. Thus, refrain from accessing this link directly from the browser.
+
+## Running the client
 The client was developed using ViteJS. Before running the system, run the following command to install frontend dependencies:
 
 ```npm install```
