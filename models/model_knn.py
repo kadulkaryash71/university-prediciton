@@ -1,14 +1,14 @@
 import pandas as pd
+import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler    
 from sklearn.model_selection import train_test_split
-import xgboost as xgb
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import pickle
-import json
 
 # Loading Data
-df = pd.read_excel('Combineeed_data.xlsx', sheet_name='Append2')
+df = pd.read_excel('../datasets/Combineeed_data.xlsx', sheet_name='Append2')
 
 # Cleaning
 df=df.dropna(subset=['Name','University'])
@@ -74,9 +74,14 @@ x_train= st_x.fit_transform(x_train)
 x_test= st_x.transform(x_test)    
 
 # Training
-xgb_classifier = xgb.XGBClassifier()
-xgb_classifier.fit(x_train,y_train)
-y_pred = xgb_classifier.predict(x_test)
+knn = KNeighborsClassifier(n_neighbors=7)
+knn.fit(x_train, y_train)
+  
+# Predict on dataset which model has not seen before
+print(knn.score(x_test, y_test))
+
+# Testing the model
+y_pred = knn.predict(x_test)
 
 # Accuracy
 acc=accuracy_score(y_test,y_pred)
@@ -93,5 +98,11 @@ print("Recall    :", recall)
 F1_score = f1_score(y_test, y_pred)
 print("F1-score  :", F1_score)
 
-filename = open("predict_xgboost.pkl", "wb")
-pickle.dump(xgb_classifier, filename)
+# Experiment
+new_data = np.array([[310,92,7,96,1,0,0,0,0]])
+y_pred = knn.predict(new_data)
+print(new_data, y_pred)
+
+# pickling
+filename = open("model_knn.pkl", "wb")
+pickle.dump(knn, filename)

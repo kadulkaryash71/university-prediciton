@@ -1,4 +1,0 @@
-GRE: 321
-IELTS: 7.5
-TOEFL: 111
-University: 

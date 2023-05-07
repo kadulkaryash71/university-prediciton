@@ -16,7 +16,7 @@ CORS(app)
 
 
 def text2Vector(text):
-    tokenizer = pickle.load(open("word_tokenizer.pkl", "rb"))
+    tokenizer = pickle.load(open("./models/word_tokenizer.pkl", "rb"))
     essay_vector = tokenizer.texts_to_sequences(text)
     essay_vector_padded = pad_sequences(essay_vector, maxlen=800)
     vector = np.reshape(essay_vector_padded, (essay_vector_padded.shape[0], 1, essay_vector_padded.shape[1]))
@@ -26,7 +26,7 @@ def text2Vector(text):
 def ValuePredictor(to_predict_list):
     to_predict = np.array(to_predict_list).reshape(1, 9)
     loaded_model = pickle.load(
-        open("predict_xgboost.pkl", "rb"))
+        open("./models/model_knn.pkl", "rb"))
     result = loaded_model.predict(to_predict)
     return result[0]
 
@@ -50,7 +50,7 @@ def tester():
 def docGrade():
     essay = request.get_json()["document"]
     essay = list([essay])
-    model = pickle.load(open("grading_ml.pkl", "rb"))
+    model = pickle.load(open("./models/grading_ml.pkl", "rb"))
     vector = text2Vector(essay)
     result = model.predict(vector)
     result = np.round(result[0][0])

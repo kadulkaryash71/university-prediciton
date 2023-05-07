@@ -1,0 +1,13 @@
+# Model: KNN
+
+GRE: 312
+IELTS: 6
+TOEFL: 92
+University: New Jersey Institute of Technology
+Result: 0
+
+GRE: 332
+IELTS: 8
+TOEFL: 92
+University: New Jersey Institute of Technology
+Result: 1
